@@ -1,5 +1,6 @@
 <script>
 	import { createEventDispatcher } from 'svelte';
+	import { readable } from 'svelte/store';
 
 	let dispatch = createEventDispatcher();
 
@@ -13,7 +14,7 @@
 			author,
 			title,
 			pages,
-			read,
+			read: read == false ? '👎' : '👍',
 			id: Math.random()
 		};
 
@@ -25,7 +26,7 @@
 	<input type="text" placeholder="author" bind:value={author} required />
 	<input type="text" placeholder="title" bind:value={title} required />
 	<input type="number" placeholder="pages" bind:value={pages} required />
-	<label>Have you read?<input type="checkbox" bind:checked={read} /></label>
+	<label>Did you like it?<input type="checkbox" bind:checked={read} /></label>
 	<button>submit</button>
 </form>
 
