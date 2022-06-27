@@ -14,18 +14,25 @@
 <style>
 	.backdrop {
 		width: 100%;
-		height: 100%;
-		position: static;
-		background-color: rgba(0, 0, 0, 0.2);
+		height: 100vh;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+		background-color: rgba(192, 133, 133, 0.204);
 	}
 
 	.modal {
-		position: relative;
-		padding: 20px;
-		max-width: 200px;
-		border-radius: 10px;
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 250px;
+		height: 340px;
 		text-align: center;
-		background-color: aliceblue;
-		margin: 10% auto;
+		background-color: rgba(24, 24, 24);
+		border-radius: 10px;
 	}
 </style>
